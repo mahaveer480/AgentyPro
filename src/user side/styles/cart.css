@@ -1,0 +1,381 @@
+/* ========== GENERAL LAYOUT ========== */
+.Container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 1258px;
+}
+
+.header_Container {
+  display: flex;
+}
+
+.LeftsideBar {
+  /* border: 2px solid; */
+  width: 85px !important; 
+}
+
+.Rightsection {
+  width: 100%;
+}
+
+/* ========== SIDEBAR ========== */
+.sidebar {
+  width: 300px;
+  background: #f8fafc;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* ========== CHANNEL TOGGLE ========== */
+.channel-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  max-width: 675px;
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 0%;
+}
+
+.channel_logo {
+  height: 40px;
+  width: 40px;
+  margin-right: 3px;
+}
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  width: 50px;
+  height: 29px;
+  background: #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none !important;
+}
+
+.switch.on {
+  background: #4caf50;
+}
+
+.switch-circle {
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  width: 23.56px;
+  height: 23.56px;
+  background: #ffffff;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.switch.on .switch-circle {
+  left: 22px;
+}
+
+/* ========== MAIN SECTION ========== */
+.main {
+  flex: 1;
+  background: #ffffff;
+  padding: 20px;
+  text-align: left;
+}
+
+/* Channel Management Header */
+.Channel_Management {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 109px;
+  background-color: #f8fafc;
+  padding: 0 20px;
+  border-bottom: 1px solid #cbd5e1;
+}
+
+.Channel_Management h2 {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.search-container {
+  position: relative;
+  max-width: 320px;
+  width: 100%;
+}
+
+.search-bar-with-icon {
+  width: 100%;
+  padding: 10px 40px 10px 20px; /* Right padding for the icon */
+  border: 1px solid #ccc;
+  border-radius: 50px;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #888;
+  pointer-events: none; /* Prevents icon from blocking input */
+}
+
+/* ========== INPUT STYLES ========== */
+.search-bar {
+  width: 100%;
+  max-width: 320px;
+  padding: 10px 20px 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+}
+
+.label {
+  display: block;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+.phone_Number,
+.input,
+.select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.phone_Number {
+  max-width: 430px !important;
+}
+
+.input,
+.select {
+  max-width: 657px;
+}
+
+/* ========== RECENT ACTIVITY ========== */
+.activity {
+  margin-top: 20px;
+  max-width: 651px;
+  width: 100%;
+}
+
+.activity h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.activity-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.activity-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+}
+
+.status-success {
+  color: green;
+}
+
+.status-failed {
+  color: red;
+}
+
+.text-muted {
+  font-size: 14px;
+}
+
+/* Style the select dropdown */
+.select {
+  appearance: none; /* Hide the default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px 40px 10px 10px; /* Right padding for the arrow */
+  font-size: 16px;
+  border-radius: 5px;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center; /* Move arrow to the right */
+  background-size: 16px;
+}
+
+/* Optional: on focus or hover */
+.select:focus {
+  outline: none;
+  border-color: #777;
+}
+
+/* ========== MOBILE SIDEBAR ========== */
+.mobile_sidebar {
+  display: none;
+}
+
+/* ========== RESPONSIVE STYLES (MAX WIDTH: 844px) ========== */
+@media (max-width: 844px) {
+  /* Show Mobile Sidebar, Hide Desktop Sidebar */
+  .mobile_sidebar {
+    display: block;
+    width: 100%;
+    background-color: #f8fafc;
+    padding: 18px 15px;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    gap: 15px;
+    border-bottom: 1px solid #cbd5e1;
+  }
+
+  .LeftsideBar,
+  .sidebar {
+    display: none !important;
+  }
+
+  .sidebar {
+    width: 60px;
+    padding: 10px;
+    overflow: hidden;
+  }
+
+  .sidebar h2,
+  .sidebar p {
+    display: none;
+  }
+
+  /* Responsive Channel Toggle */
+  .channel-toggle {
+    display: inline-flex;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 10px;
+    flex-shrink: 0;
+    max-width: 240px;
+    width: 100%;
+    font-size: 1.3rem !important;
+    border: 2px solid;
+  }
+
+  .channel-toggle_1 {
+    display: inline-block;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    max-width: 675px;
+    border: none;
+  }
+
+  .channel-toggle_active {
+    display: none;
+  }
+
+  .channel_logo {
+    height: 32px;
+    width: 32px;
+    margin-right: 8px;
+  }
+
+  .channel-toggle span {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Touch-Friendly Switch */
+  .switch {
+    width: 48px;
+    height: 26px;
+  }
+
+  .switch-circle {
+    width: 20px;
+    height: 20px;
+  }
+
+  .switch.on .switch-circle {
+    left: 24px;
+  }
+
+  /* Stack Header Elements */
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  /* Full-Width Search Bar */
+  .search-bar {
+    width: 100%;
+    margin-top: 10px;
+    display: none;
+  }
+
+  .Channel_Management {
+    height: 80px !important;
+    background-color: white;
+    border-bottom: none;
+  }
+
+  .Channel_Management_Title {
+    font-weight: 500 !important;
+    font-size: 1.3rem !important;
+  }
+
+  /* Adjust Channel Item on Mobile */
+  .channel-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px;
+    border: 2px solid;
+  }
+
+  /* Full Width Inputs */
+  .input,
+  .select {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* Stack Recent Activity Items */
+  .activity {
+    width: 100%;
+  }
+
+  .activity-item {
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  /* Footer Adjustments */
+  .footer {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .input_container {
+    height: 97px !important;
+  }
+}
+
+.whatsaap_Text  {
+  font-size: 2rem !important;
+  color: black !important;
+}
+.label{
+    color: black !important;
+
+}

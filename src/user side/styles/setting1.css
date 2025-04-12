@@ -1,0 +1,110 @@
+/* SettingComponent.css */
+
+.support-container {
+    padding: 40px 30px 40px 30px;
+    font-family: 'Segoe UI', sans-serif;
+    max-width: 1300px;
+    margin: auto;
+    background-color:#f1f1f1b6;
+  }
+  
+  .support-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  
+  .support-box {
+    display: flex;
+    margin: 0px 15%;
+    background: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    /* box-shadow: 0 4px 16px rgba(0,0,0,0.05); */
+    gap: 30px;
+    position: relative;
+  }
+  
+  .support-left {
+    flex: 2;
+    border-right: 1px solid #eee;
+    padding-right: 30px;
+  }
+  
+  .support-left h3,
+  .support-left h4 {
+    margin-bottom: 15px;
+  }
+  
+  .support-left ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+  }
+  
+  .support-left li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    border-bottom: 1px solid #f1f1f1;
+    transition: color 0.2s ease;
+  }
+  
+  .support-left li:hover {
+    color: #007bff;
+  }
+  
+  .support-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .support-right input,
+  .support-right textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    resize: none;
+  }
+  
+  .support-right button {
+    background: #f5f7fa;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .chat-icon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: #0066ff;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
+  }
+  
+  @media (max-width: 900px) {
+    .support-box {
+      flex-direction: column;
+    }
+  
+    .support-left {
+      border-right: none;
+      padding-right: 0;
+    }
+  }
+  

@@ -1,0 +1,85 @@
+#adminloginmaincontainermain{
+/* border: 3px solid blue; */
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+#admininput{
+display: flex;
+background-color: white;
+width:100%;
+color: black !important; 
+height: 60px;
+padding: 10px;
+font-size: 20px;
+border-radius: 8px;
+border: none;
+border: 0.7px solid rgb(146, 146, 146);
+}
+
+
+#paroftreams{
+display: flex;
+align-items: center;
+text-align: center;
+padding: 5px 2px;
+font-size: 12px;
+font-weight: 600;
+
+}
+
+
+
+.form-check{
+margin-top: 10px;
+
+
+
+}
+
+
+
+#adminloginmaincontainer{
+/* border: 1px solid red; */
+/* margin: 70%; */
+/* margin: 30px; */
+width: 30%;
+
+/* margin: 15% auto 15% auto; */
+
+
+}
+
+
+
+#adminloginwelcome{
+margin-bottom: 30px;
+
+
+
+}
+
+
+#adminloginbutton{
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width:100%;
+    color: white !important; 
+    height: 60px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgba(109, 135, 181, 1);
+
+}
+
+
+
+

@@ -1,0 +1,109 @@
+.client-accounts-wrapper {
+    display: flex;
+    min-height: 100vh;
+    font-family: sans-serif;
+  }
+  
+
+
+  #hr{
+padding: 0px;
+margin: 0px;
+width: 100%;
+
+
+  }
+
+
+
+  .client-accounts-content {
+    /* margin-left: 250px; Reserve space for sidebar */
+    flex: 1;
+    padding: 2rem;
+    background-color: #f9fafb;
+  }
+  #admin-panel-headingh3 {
+    font-size: 30px;
+    font-weight: 900;
+    margin: 1.5rem 0px 0.5rem 0px ;
+/* padding: 30px !important; */
+
+  }
+
+
+  
+  .admin-panel-heading {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+  
+  .main-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+  }
+  
+  .client-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  .client-table th,
+  .client-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .disable-btn {
+    background: #b6b6b633;
+    color: black;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .alerts-card ul li{
+padding: 5px 0px;
+font-weight: 700;
+
+
+  } 
+
+  .pricing-card ul li {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+
+
+
+  }
+
+
+
+
+
+  .bottom-section {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .pricing-card,
+  .alerts-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    flex: 1;
+  }
+  
+  ul {
+    margin: 0;
+    padding-left: 1rem;
+  }
+  

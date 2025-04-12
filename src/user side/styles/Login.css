@@ -1,0 +1,166 @@
+#logindiv{
+    display: flex;
+    justify-content: space-between; /* Adjust spacing */
+    align-items: center; /* Align items vertically */
+}
+/* leftside? */
+#imagediv{
+    width: 49%; /* Adjust width as needed */
+    padding: 20px;
+    text-align: center;
+
+}
+
+#loginimage{
+height: 94vh;
+width: 80%;
+
+}
+
+/* rightside */
+#inputdiv{
+width: 550px;
+height: 883px;
+gap: 10px;
+margin-top: 71px;
+padding: 42px 51px;
+    text-align: center;
+}
+
+
+#buttondiv{
+    display: flex;
+    justify-content: space-evenly; /* Adjust spacing */
+    align-items: center; /* Align items vertically */
+    width: 475px;
+    height: 60px;
+
+}
+
+#googlebutton{
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+border: none;
+border: 0.7px solid rgba(128, 128, 128, 0.479);
+padding: 15px;
+background-color: white;
+border-radius: 8px;
+/* width: 170px; */
+
+    margin: 5px 5px;
+height: 60px;
+width:217px;
+gap: 16px; 
+padding: 20px;
+text-align: center;
+
+}
+
+
+#goolgeimg{
+width: 15px;
+}
+
+
+#facebookbutton{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: none;
+    border: 1px solid rgba(128, 128, 128, 0.479);
+    padding: 15px;
+    background-color: white;
+    border-radius: 4px;
+    width: 130px;
+    width: 49%;
+    padding: 20px;
+    text-align: center;    
+    margin: 10%;
+}
+    
+    
+    #facebookimg{
+    width: 15px;
+    }
+
+
+    .chart-container {
+        padding: 1.5rem;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 600px;
+        margin: auto;
+      }
+      
+      .chart-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+      
+      .chart-header h2 {
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+      
+      .mode-switch {
+        display: flex;
+        gap: 8px;
+        background: #f0f0f0;
+        padding: 5px;
+        border-radius: 20px;
+      }
+      
+      .mode-switch button {
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: #666;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+      }
+      
+      .mode-switch button.active {
+        background: #007bff;
+        color: white;
+      }
+      
+      .mode-switch button.spending.active {
+        background: #ff4d4d;
+      }
+      
+      .chart-tabs {
+        display: flex;
+        gap: 16px;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 8px;
+      }
+      
+      .chart-tabs button {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: #666;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding-bottom: 4px;
+      }
+      
+      .chart-tabs button.active {
+        color: #007bff;
+        border-bottom: 2px solid #007bff;
+      }
+      
+      .chart-wrapper {
+        margin-top: 1rem;
+      }
+      

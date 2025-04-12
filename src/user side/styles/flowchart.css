@@ -1,0 +1,193 @@
+.flow-container {
+  margin-left: 85px;
+  padding: 2rem;
+  font-family: 'Inter', sans-serif;
+  background-color: #f9fafb;
+}
+
+.flow-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+}
+
+.flow-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.flow-settings{
+
+  flex: 1 1 40%;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding:2.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+
+}
+.flow-logic {
+  flex: 1 1 50%;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding:2.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+@media (max-width: 768px) {
+  .flow-settings,
+  .flow-logic {
+    flex: 1 1 100%;
+  }
+}
+
+.flow-settings label {
+  font-weight: 600;
+  margin-top: 1.25rem;
+  display: block;
+  font-size: 26px;
+  color: #1e293b;
+}
+
+.flow-settings select,
+.flow-settings textarea {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 15px;
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+.toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 16px;
+  color: #1e293b; 
+  margin-bottom: 1.5rem;
+}
+
+
+
+
+#select{
+background-color: white !important;
+
+
+}
+
+
+.variables-section p,
+.fallback-section p {
+  font-size: 18px;
+  margin: 0.35rem 0;
+  font-weight: 700;
+  color: #374151;
+}
+
+.fallback-section p:first-child,
+.variables-section p:first-child {
+  font-weight: 700;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.flow-logic h4 {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 1.5rem;
+  color: #1e293b;
+}
+
+.flow-step {
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin: 0.75rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  font-size: 16px;
+  /* height: ; */
+  /* width: ; */
+}
+
+.flow-step.blue {
+  background-color: #5592f3; /* Tailwind Blue-500 */
+  color: white;
+  
+}
+
+.flow-step.gray {
+  background-color: #f3f4f6; /* Tailwind Gray-100 */
+  color: #1f2937;
+}
+
+.step-number {
+  font-weight: 700;
+  font-size: 18px;
+  background-color: #60a5fa;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flow-connector {
+  text-align: center;
+  font-size: 20px;
+  color: #9ca3af;
+  margin: 0px;
+}
+
+
+.flow-connector p{
+
+/* margin: 0px; */
+
+
+}
+
+
+
+@media (max-width: 1200px) {
+  .flow-container {
+    margin-left: 0;
+  }
+
+}
+
+.form-switch .form-check-input {
+
+height: 2em;
+width: 3em !important;
+/* border: 3px  solid red; */
+
+}
+
+
+.form-check-input:focus{
+border-color: white !important;
+}
+
+
+
+.form-check-input:checked{
+
+
+
+  border-color:rgba(255, 255, 255, 0)  !important;
+  background-color: rgb(105, 187, 105) !important;
+}

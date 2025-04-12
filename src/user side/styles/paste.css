@@ -1,0 +1,394 @@
+/* ========== GLOBAL RESET ========== */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* ========== LAYOUT CONTAINER ========== */
+  .agent-mgmt_container {
+    display: flex;
+    width: 100% !important;
+  }
+  .IndustryTone_con input {
+width: 100% !important;
+
+
+  }
+
+
+
+
+.IndustryTone_con{
+
+display: flex;
+flex-direction: column;
+width: 100%;
+
+
+}
+
+
+
+
+
+  /* ========== HEADER ========== */
+  .agent-mgmt-header {
+    height: 100px;
+    width: 100% !important;
+    padding: 0 20px;
+    background-color: #f8fafc;
+    border-bottom: 1px solid #cbd5e1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* ========== SIDEBAR ========== */
+  .agent-mgmt-sidebar {
+    width: 85px;
+    display: block;
+  }
+  
+  /* ========== WRAPPER ========== */
+  .agent-mgmt-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  /* ========== MOBILE HEADER ========== */
+  .agent-mgmt-mobile-header {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    position: relative;
+  }
+  
+  .agent-mgmt-mobile-header h2 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .agent-mgmt-back-btn {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+  }
+  
+  /* ========== DESKTOP VIEW ========== */
+  .agent-mgmt-desktop-view {
+    display: flex;
+    width: 100%;
+    gap: 1.5rem;
+    box-sizing: border-box;
+  }
+  
+  /* ========== SIDEBAR PANEL (LEFT) ========== */
+  .agent-mgmt-sidebar-panel {
+    max-width: 410px;
+    padding: 1.2rem;
+    background-color: #f8fafc;
+  }
+  
+  .agent-mgmt-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .agent-mgmt-bot-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 376px;
+  }
+  
+  /* Bot Card */
+  .agent-mgmt-bot-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .agent-mgmt-bot-card:hover {
+    background-color: #e2e8f0;
+    transform: translateY(-2px);
+  }
+  
+  .agent-mgmt-card-header {
+    margin-right: 8px;
+  }
+  
+  .agent-mgmt-bot-img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+  }
+  
+  .agent-mgmt-bot-img:hover {
+    transform: scale(1.1);
+  }
+  
+  .agent-mgmt-whatsapp-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 0.4rem;
+    vertical-align: middle;
+  }
+  
+  .agent-mgmt-formal-label {
+    font-size: 0.75rem;
+    color: #4b5563;
+  }
+  
+  .agent-mgmt-card-body {
+    flex-grow: 1;
+    text-align: left;
+  }
+  
+  .agent-mgmt-status {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.75rem;
+    background: #1d2a45;
+    color: white;
+    border-radius: 999px;
+    display: inline-block;
+  }
+  
+  .agent-mgmt-card-menu {
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    margin-bottom: 30px;
+  }
+  
+  /* ========== FORM SECTION (CENTER) ========== */
+  .agent-mgmt-form-section {
+    flex: 1;
+    padding: 1.3rem;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .agent-mgmt-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .agent-mgmt-label {
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 16px 0 6px;
+  }
+  
+  .agent-mgmt-form input {
+    height: 65px;
+    padding: 0 1rem;
+    border: 1.25px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .agent-mgmt-form input:focus,
+  .agent-mgmt-search-input:focus {
+    border-color: #3b82f6;
+    outline: none;
+  }
+  
+  .agent-mgmt-row-inputs {
+    display: flex;
+    gap: 1rem;
+    margin-top: 20px;
+}
+
+.agent-mgmt-row-inputs input {
+    flex-grow: 1;
+    width: 199px;
+}
+
+.agent-mgmt-form button {
+    margin-top: 20px;
+    width: 50%;
+    padding: 1rem;
+    font-weight: 500;
+    background: #1e293b;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .agent-mgmt-form button:hover {
+    background-color: #334155;
+  }
+  
+  /* ========== RIGHT PANEL ========== */
+  .agent-mgmt-right-panel {
+    width: 30%;
+    margin-top: 10px;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    gap: 1rem;
+  }
+  
+  .agent-mgmt-created-card {
+        padding: 1rem;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .agent-mgmt-created-card:hover {
+    background-color: #f1f5f9;
+    transform: translateY(-2px);
+  }
+  
+  /* ========== SEARCH BAR ========== */
+  .agent-mgmt-search-container {
+    position: relative;
+    max-width: 320px;
+    width: 100%;
+  }
+  
+  .agent-mgmt-search-input {
+    width: 100%;
+    padding: 10px 40px 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .agent-mgmt-search-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #888;
+    pointer-events: none;
+  }
+  
+  /* ========== RESPONSIVE STYLES ========== */
+  
+  /* Medium-Large Screens */
+  @media (max-width: 1324px) {
+    .agent-mgmt-desktop-view {
+      flex-wrap: wrap;
+    }
+  
+    .agent-mgmt-created-card {
+      width: 100%;
+      max-width: 1200px !important;
+      background-color: #f1f5f9;
+    }
+  
+    .agent-mgmt-right-panel {
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .IndustryTone_con {
+      width: 100%;
+    }
+  }
+  
+  /* Tablets */
+  @media (max-width: 1200px) {
+    .agent-mgmt-sidebar {
+      display: none;
+    }
+  
+    .agent-mgmt-wrapper {
+      width: 90%;
+      margin: auto;
+      background-color: #f8fafc;
+    }
+  
+    .agent-mgmt-right-panel {
+      padding: 20px;
+    }
+  }
+  
+  /* Small Devices */
+  @media (max-width: 990px) {
+    .agent-mgmt-desktop-view {
+      flex-direction: column;
+      padding: 0.5rem;
+    }
+  
+    .agent-mgmt-sidebar-panel,
+    .agent-mgmt-form-section,
+    .agent-mgmt-right-panel {
+      width: 100%;
+    }
+  
+    .agent-mgmt-bot-list {
+      flex-direction: row;
+      overflow-x: auto;
+      gap: 1rem;
+      width: 100%;
+    }
+  
+    .agent-mgmt-sidebar-panel {
+      max-width: 100% !important;
+      overflow-x: auto;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+  
+    .agent-mgmt-row-inputs {
+      flex-direction: column;
+    }
+  
+    .agent-mgmt-row-inputs input,
+    .agent-mgmt-form button,
+    .agent-mgmt-search-container {
+      width: 100%;
+    }
+  
+    .agent-mgmt-created-card {
+      max-width: 100%;
+      flex-wrap: wrap;
+    }
+  
+    .agent-mgmt-bot-card {
+      width: 100% !important;
+      margin-top: 10px;
+      border: 2px solid !important;
+    }
+  
+    .agent-mgmt-card-Title {
+      font-size: 16px !important;
+    }
+  
+    .agent-mgmt-menu {
+      margin-left: 50px;
+    }
+  }
+  
+  /* Extra Small Devices */
+  @media (max-width: 550px) {
+    .agent-mgmt-wrapper {
+      width: 100%;
+    }
+  }
