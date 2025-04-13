@@ -1,31 +1,48 @@
 import React, { useState } from "react";
 import "./css/faqs.css";
-import aipng from '../assets/icons/AI.png'
-import line from '../assets/icons/Line wrapper.png'
+import aipng from '../assets/icons/AI.png';
+import line from '../assets/icons/Line wrapper.png';
 
 const faqs = [
   {
-    question: "What is Talkeen?",
+    question: "What is AgentyPro?",
     answer:
-      "Talkeen is an intelligent AI platform that helps service businesses communicate with their customers automatically, just like a real person would. Our AI agents sell, answer messages, schedule appointments, provide information, follow up with leads, and even make voice calls with realistic cloned voices. It's like having a 24/7 sales and service team that never sleeps and knows your business inside out",
+      "AgentyPro is a smart platform that helps you automate sales, scheduling, and customer service using artificial intelligence. Everything runs without human intervention, yet conversations sound 100% natural — just like a real person.",
   },
   {
-    question: "Does the AI really sound human?",
-    answer: "Yes, the AI uses advanced voice models that sound human-like.",
-  },
-  {
-    question: "Do I need to be tech-savvy to use Talkeen?",
+    question: "What can I automate with AgentyPro?",
     answer:
-      "Not at all. Talkeen is designed for ease-of-use and requires no coding skills.",
+      "You can automate conversations on WhatsApp, Instagram, Facebook Messenger, voice calls, emails, and more. Your AI agents can sell, book appointments, answer questions, send prices, and follow up — all automatically.",
   },
   {
-    question: "Can I train the AI to fit my business?",
+    question: "Do I need technical knowledge to use AgentyPro?",
     answer:
-      "Absolutely! You can customize responses and train it to handle your business-specific needs.",
+      "Not at all. AgentyPro is designed to be extremely easy to use. Everything comes prebuilt based on your industry. You just choose your business type, connect your WhatsApp, and you’re up and running in minutes.",
   },
   {
-    question: "Is it safe to let the AI talk to my clients?",
-    answer: "Yes, Talkeen uses secure and monitored channels for all communication.",
+    question: "What is an AI Agent and how does it work?",
+    answer:
+      "An AI agent is like having a virtual assistant working for you 24/7. You can create multiple agents: one for sales, one for scheduling, one for pricing — and they all respond naturally inside the same WhatsApp thread.",
+  },
+  {
+    question: "How do the AI voice calls work?",
+    answer:
+      "AgentyPro can automatically call your clients using ultra-realistic AI voices to confirm appointments, follow up, or re-engage leads. If the call fails or your credits run out, the system will instantly switch to WhatsApp as a fallback — no action needed.",
+  },
+  {
+    question: "What happens if I run out of credits?",
+    answer:
+      "You’ll get automatic alerts when your balance is low. You can top up manually or enable auto-recharge. AgentyPro will also switch channels smartly (e.g., from voice to WhatsApp) so you never lose a lead or sale.",
+  },
+  {
+    question: "What real benefits will I see using AgentyPro?",
+    answer:
+      "More sales, less manual work, and a better experience for your clients. You’ll have instant responses, no human errors, and a 24/7 presence — even while you sleep. AgentyPro was built to revolutionize traditional communication and bring your business into the future of automation and customer engagement.",
+  },
+  {
+    question: "Can I try AgentyPro before subscribing?",
+    answer:
+      "Yes! You’ll have access to a free demo or trial so you can test the platform and launch your first campaign in just a few minutes.",
   },
 ];
 

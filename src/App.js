@@ -25,10 +25,11 @@ import Signup from "./user side/pages/signup";
 import Forgotpassword from "./user side/pages/forgotpassword";
 import Adminpanelrow from "./Admin side/component/adminpanelrow";
 import InboxPage from "./user side/pages/inbox";
+import Logout2 from "./user side/pages/Logout";
 function App() {
   return (
     <Router>
-<Needhelp/>
+{/* <Needhelp/> */}
 {/* <Adminpanelrow/> */}
 {/* <InboxPage/> */}
       {/* <SideNavigation2 /> */}
@@ -44,6 +45,7 @@ function App() {
         <Route path="/binance" element={<Binance />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/logout" element={<Logout />} />
+        <Route path="/logoutt" element={<Logout2/>} />
         <Route path="/login" element={<Loginpage />} />
         <Route path="/forgotpassword" element={<Forgotpassword />} />
         <Route path="/Sidebar" element={<Sidebar />} />

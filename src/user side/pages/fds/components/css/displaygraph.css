@@ -1,37 +1,49 @@
+/* Container for overall display */
 .display-wrapper {
-  /* width: 150%; */
   display: flex;
   justify-content: center;
-  /* padding: 2rem; */
-  background: white;
+  align-items: center;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
 }
 
 /* Image container with smooth scaling and shadow */
 .image-container {
   max-width: 1200px;
   width: 100%;
-}
-
-.image {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
 }
 
-/* Shadow */
+/* Image styling with smooth transition */
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
 
-/* Display control */
+/* Display control: Desktop-only */
 .pc-only {
   display: block;
 }
 
+/* Display control: Mobile-only */
 .mobile-only {
   display: none;
 }
 
-/* Responsive media query */
+/* Responsive media query for smaller screens */
 @media (max-width: 1024px) {
   .pc-only {
     display: none;
@@ -39,5 +51,25 @@
 
   .mobile-only {
     display: block;
+  }
+}
+
+/* Smooth background change when hovering over the display-wrapper */
+.display-wrapper:hover {
+  background: #f7f7f7;
+}
+
+/* Subtle animation for image container */
+.image-container {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Keyframe for fade-in effect */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

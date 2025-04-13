@@ -1,132 +1,182 @@
+/* Main footer styling */
 .footer {
-    background-color: #ffffff;
-    padding: 3rem 2rem 1.5rem;
-    font-family: 'Segoe UI', sans-serif;
-    color: #1f1f1f;
-    border-top: 1px solid #eee;
-  }
-  
+  background-color: #ffffff;
+  padding: 3rem 2rem 1.5rem;
+  font-family: 'Segoe UI', sans-serif;
+  color: #1f1f1f;
+  border-top: 1px solid #eee;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease;
+}
+
+.footer:hover {
+  background-color: #f7f7f7; /* Slight change on hover */
+}
+
+/* Top section of the footer */
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+/* Footer logo */
+.footer-logo {
+  width: 150px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+  transform: scale(1.05); /* Logo subtle zoom effect */
+}
+
+/* Grid layout for footer links */
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.footer-columns:hover {
+  transform: translateY(-4px); /* Slight lift effect on hover */
+}
+
+/* Column headers in the footer */
+.footer-column h4 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #1f1f1f;
+  transition: color 0.3s ease;
+}
+
+.footer-column h4:hover {
+  color: #1e40af; /* Highlight header color on hover */
+}
+
+/* Footer link items */
+.footer-column p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-column p:hover {
+  text-decoration: underline;
+  color: #1e40af; /* Change text color on hover */
+}
+
+/* Social icons layout */
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.social-icons img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2); /* Enlarging effect on hover */
+}
+
+/* Bottom section of the footer */
+.footer-bottom {
+  margin-top: 2.5rem;
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #555;
+  width: 100%;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.footer-bottom:hover {
+  transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.footer-links p {
+  cursor: pointer;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.footer-links p:hover {
+  text-decoration: underline;
+  color: #1e40af; /* Change text color on hover */
+}
+
+/* Responsive layout for larger screens */
+@media (min-width: 768px) {
   .footer-top {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 100%;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
   }
-  
+
   .footer-logo {
-    width: 150px;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
   }
-  
-  /* Grid columns for links */
-  .footer-columns {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 2rem;
-    width: 100%;
-  }
-  
-  .footer-column h4 {
-    font-weight: 600;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    color: #1f1f1f;
-  }
-  
-  .footer-column p {
-    margin: 0.3rem 0;
-    font-size: 0.95rem;
-    color: #333;
-    cursor: pointer;
-  }
-  
-  .footer-column p:hover {
-    text-decoration: underline;
-  }
-  
-  /* Social icons in connect column */
+
   .social-icons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 0.5rem;
+    flex-direction: row;
   }
-  
-  .social-icons img {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-  }
-  
-  /* Footer bottom area */
+
   .footer-bottom {
-    margin-top: 2.5rem;
-    border-top: 1px solid #ddd;
-    padding-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 0.85rem;
-    color: #555;
-    width: 100%;
-    gap: 0.5rem;
+    flex-direction: row;
+    justify-content: space-between;
   }
-  
-  .footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: center;
-  }
-  
-  .footer-links p {
-    cursor: pointer;
-    margin: 0;
-  }
-  
-  .footer-links p:hover {
-    text-decoration: underline;
-  }
-  
-  /* Responsive layout for larger screens */
-  @media (min-width: 768px) {
-    .footer-top {
-      flex-direction: row;
-      align-items: flex-start;
-      justify-content: space-between;
-    }
-  
-    .footer-logo {
-      margin-bottom: 0;
-    }
-  
-    .social-icons {
-      flex-direction: row;
-    }
-  
-    .footer-bottom {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  }
-  .social-icons-vertical {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    margin-top: 0.5rem;
-  }
-  
-  .social-row {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.95rem;
-    color: #333;
-    cursor: pointer;
-  }
-  
-  .social-row img {
-    width: 20px;
-    height: 20px;
-  }
-  
+}
+
+/* Vertical social icons container */
+.social-icons-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.social-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.social-row img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.social-row img:hover {
+  transform: scale(1.2); /* Enlarging effect on hover */
+}

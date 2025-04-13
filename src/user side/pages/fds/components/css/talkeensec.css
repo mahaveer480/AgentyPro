@@ -1,232 +1,241 @@
 /* Shared styles */
 .badge {
-    background: #f0f0ff;
-    padding: 4px 12px;
-    border-radius: 12px;
-    font-size: 14px;
-    display: inline-block;
-    margin-bottom: 8px;
+  background: #f0f0ff;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0 0 8px;
+}
+
+.subtitle {
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.primary-btn {
+  background: rgba(29, 42, 69, 1);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.secondary-btn {
+  background: #fff;
+  border: 1px solid #ccc;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px); /* Increased hover effect for prominence */
+}
+
+.card img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.fade-in.delay-1 {
+  animation-delay: 0.3s;
+}
+
+.fade-in.delay-2 {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  h2 {
-    font-size: 28px;
-    font-weight: bold;
-    margin: 0 0 8px;
-  }
-  
-  .subtitle {
-    color: #888;
-    margin-bottom: 20px;
-  }
-  
-  .buttons {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .primary-btn {
- background: rgba(29, 42, 69, 1);
-    
-    color: white;
-    padding: 10px 20px;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .secondary-btn {
-    background: #fff;
-    border: 1px solid #ccc;
-    color: #333;
-    padding: 10px 20px;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 16px;
-  }
-  
-  .card {
-    background: #fff;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    text-align: left;
-    transition: transform 0.3s ease;
-  }
-  
-  .card img {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 10px;
-  }
-  
-  /* Animations */
-  .fade-in {
+  from {
     opacity: 0;
-    animation: fadeIn 0.8s ease forwards;
+    transform: translateY(20px);
   }
-  
-  .fade-in.delay-1 {
-    animation-delay: 0.3s;
-  }
-  
-  .fade-in.delay-2 {
-    animation-delay: 0.6s;
-  }
-  
-  @keyframes fadeIn {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-  }
-  
-  .slide-up {
+}
+
+.slide-up {
+  opacity: 0;
+  animation: slideUp 0.8s ease forwards;
+}
+
+.slide-up.delay-1 {
+  animation-delay: 0.3s;
+}
+
+.slide-up.delay-2 {
+  animation-delay: 0.6s;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
     opacity: 0;
-    animation: slideUp 0.8s ease forwards;
   }
-  
-  .slide-up.delay-1 {
-    animation-delay: 0.3s;
+  to {
+    transform: translateY(0px);
+    opacity: 1;
   }
-  
-  .slide-up.delay-2 {
-    animation-delay: 0.6s;
-  }
-  
-  @keyframes slideUp {
-    from {
-      transform: translateY(30px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0px);
-      opacity: 1;
-    }
-  }
-  
-  /* Responsive Visibility */
+}
+
+/* Responsive Visibility */
+.talkeen-desktop-section {
+  display: block;
+}
+
+.talkeen-mobile-section {
+  display: none;
+}
+
+/* Media queries */
+@media (max-width: 1024px) {
   .talkeen-desktop-section {
-    display: block;
-  }
-  
-  .talkeen-mobile-section {
     display: none;
   }
-  
-  /* Media queries */
-  @media (max-width: 1024px) {
-    .talkeen-desktop-section {
-      display: none !important;
-    }
-    .talkeen-mobile-section {
-      display: block !important;
-    }
-  
-    .desktop-only {
-      display: none !important;
-    }
-  
-    .mobile-only {
-      display: block !important;
-    }
-  }
-  
-  .talkeen-desktop-section {
-    display: block;
-    padding: 60px 20px;
-    text-align: center;
-    animation: fadeSlideDown 1s ease forwards;
-  }
-  
-  .talkeen-desktop-section h2,
-  .talkeen-desktop-section .subtitle,
-  .talkeen-desktop-section .buttons {
-    animation: fadeSlideDown 0.8s ease forwards;
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  
-  .talkeen-desktop-section h2 {
-    animation-delay: 0.1s;
-  }
-  
-  .talkeen-desktop-section .subtitle {
-    animation-delay: 0.3s;
-  }
-  
-  .talkeen-desktop-section .buttons {
-    animation-delay: 0.5s;
-  }
-  
-  @keyframes fadeSlideDown {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Mobile/Tablet Section */
+
   .talkeen-mobile-section {
-    display: none;
-    padding: 40px 20px;
-    text-align: center;
+    display: block;
   }
-  
-  /* Centering on all screen sizes */
-  .talkeen-desktop-section .buttons,
-  .talkeen-mobile-section .buttons {
-    justify-content: center;
-    flex-wrap: wrap;
-    display: flex;
-  }
-  
-  .section-image {
-    margin-top: 40px;
-    text-align: center;
-  }
-  
-  .section-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-  }
-  
-  /* Show/hide based on screen size */
+
   .desktop-only {
-    display: block;
-  }
-  
-  .mobile-only {
     display: none;
   }
-  
-  @media (max-width: 1024px) {
-    .desktop-only {
-      display: none !important;
-    }
-    .mobile-only {
-      display: block !important;
-    }
-  }
-  
-  /* Mobile-Only Image Section */
-  .talkeen-mobile-section .section-image {
-    display: block; /* Ensure mobile image section is visible */
-  }
-  
-  /* Desktop-Only Image Section */
-  .talkeen-desktop-section .section-image {
+
+  .mobile-only {
     display: block;
   }
-  
+
+  /* Stacking buttons on smaller screens for better space utilization */
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.talkeen-desktop-section {
+  display: block;
+  padding: 60px 20px;
+  text-align: center;
+  animation: fadeSlideDown 1s ease forwards;
+}
+
+.talkeen-desktop-section h2,
+.talkeen-desktop-section .subtitle,
+.talkeen-desktop-section .buttons {
+  animation: fadeSlideDown 0.8s ease forwards;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.talkeen-desktop-section h2 {
+  animation-delay: 0.1s;
+}
+
+.talkeen-desktop-section .subtitle {
+  animation-delay: 0.3s;
+}
+
+.talkeen-desktop-section .buttons {
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeSlideDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile/Tablet Section */
+.talkeen-mobile-section {
+  display: none;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Centering on all screen sizes */
+.talkeen-desktop-section .buttons,
+.talkeen-mobile-section .buttons {
+  justify-content: center;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.section-image {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.section-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Show/hide based on screen size */
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .desktop-only {
+    display: none;
+  }
+  .mobile-only {
+    display: block;
+  }
+}
+
+/* Mobile-Only Image Section */
+.talkeen-mobile-section .section-image {
+  display: block; /* Ensure mobile image section is visible */
+}
+
+/* Desktop-Only Image Section */
+.talkeen-desktop-section .section-image {
+  display: block;
+}

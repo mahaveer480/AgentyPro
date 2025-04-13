@@ -20,43 +20,22 @@ const PricingSection = () => {
 
   return (
     <section className="pricing-section">
-      <div className="pricing-container">
-        <div className="pricing-header">
-          <h2>Powerful Features For Powerful<br/> Businesses</h2>
-          <p>Choose a plan that’s right for you</p>
-          <div className="toggle-wrapper">
-            <span>Pay Monthly</span>
-            <div className={`toggle-switch ${isYearly ? 'active' : ''}`} onClick={() => setIsYearly(!isYearly)}>
-              <span className="toggle-thumb"></span>
-            </div>
-            <span>Pay Yearly</span>
-            <img src={saveImg} alt="Save 20%" className="save-img" />
+    <div className="pricing-container">
+      <div className="pricing-header">
+        <h2>Powerful Features For Powerful<br /> Businesses</h2>
+        <p>Choose a plan that’s right for you</p>
+        <div className="toggle-wrapper">
+          <span>Pay Monthly</span>
+          <div className={`toggle-switch ${isYearly ? 'active' : ''}`} onClick={() => setIsYearly(!isYearly)}>
+            <span className="toggle-thumb"></span>
           </div>
-        </div>
-
-        <div className="pricing-card-right">
-          <h3 className="plan-name">Plan Free</h3>
-          <p className="plan-subtitle">For Testing the Power of Talkeen</p>
-          <div className="plan-price">
-            <span>$0</span> <span className="month-text">/ Month</span>
-          </div>
-          <button className="plan-btn">Get Started Now</button>
-
-          <div className="feature-list">
-            {features.map((feature, idx) => (
-              <div key={idx}>
-                <img
-                  src={feature.included ? tickIcon : crossIcon}
-                  alt={feature.included ? "Included" : "Not included"}
-                  className="feature-icon"
-                />
-                {feature.text}
-              </div>
-            ))}
-          </div>
+          <span>Pay Yearly</span>
+          <img src={saveImg} alt="Save 20%" className="save-img" />
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+  
   );
 };
 

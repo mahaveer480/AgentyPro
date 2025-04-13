@@ -1,8 +1,15 @@
+/* Hero Section Styling */
 .hero {
   padding: 4rem 2rem;
   text-align: center;
   background-color: #fff;
- 
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.hero:hover {
+  background-color: #f7f7f7; /* Subtle hover effect on background */
 }
 
 .hero-content {
@@ -10,6 +17,7 @@
   margin: 0 auto;
 }
 
+/* Welcome Text */
 .welcome-text {
   display: inline-block;
   background-color: #f5f6f7;
@@ -18,27 +26,47 @@
   padding: 6px 14px;
   border-radius: 999px;
   margin-bottom: 1rem;
+  transition: all 0.3s ease;
 }
 
+.welcome-text:hover {
+  background-color: #e0e4e8; /* Change background on hover */
+  transform: translateY(-4px); /* Lift effect */
+}
+
+/* Hero Heading */
 .hero-heading {
   font-size: 2.5rem;
   font-weight: 700;
   color: #0f172a;
   margin-bottom: 1rem;
+  transition: color 0.3s ease;
 }
 
+.hero-heading:hover {
+  color: #1f2a5a; /* Darken heading on hover */
+}
+
+/* Hero Subtext */
 .hero-subtext {
   font-size: 1rem;
   color: #555;
   margin-bottom: 2rem;
   line-height: 1.6;
+  transition: color 0.3s ease;
 }
 
+.hero-subtext:hover {
+  color: #333; /* Subtle hover effect on subtext */
+}
+
+/* Buttons Container */
 .hero-buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+  transition: all 0.3s ease;
 }
 
 .btn {
@@ -50,6 +78,12 @@
   border: none;
   transition: all 0.3s ease;
 }
+
+.btn:hover {
+  transform: translateY(-4px); /* Subtle lift effect on hover */
+}
+
+/* Call to Action (CTA) Buttons */
 .cta-buttons {
   display: flex;
   justify-content: center;
@@ -57,6 +91,7 @@
   gap: 1rem;
   flex-wrap: wrap;
   margin: 2rem 0;
+  transition: all 0.3s ease;
 }
 
 .primary-btn {
@@ -68,11 +103,12 @@
   font-weight: 600;
   font-size: 0.95rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .primary-btn:hover {
   background-color: #162042;
+  transform: translateY(-4px); /* Lift effect */
 }
 
 .secondary-btn {
@@ -87,15 +123,21 @@
   align-items: center;
   gap: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .secondary-btn:hover {
   background-color: #f5f7ff;
+  transform: translateY(-4px); /* Lift effect */
 }
 
 .play-icon {
   font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+.play-icon:hover {
+  transform: rotate(15deg); /* Icon rotation on hover */
 }
 
 /* Responsive for mobile */
@@ -112,7 +154,7 @@
   }
 }
 
-/* Responsive */
+/* Responsive for tablet */
 @media (max-width: 768px) {
   .hero-heading {
     font-size: 2rem;

@@ -74,6 +74,9 @@
   height: auto;
   margin-left: 0.5rem;
 }
+
+/* === FULL-WIDTH CONTAINER === */
+
 .pricing-full-width {
   width: 100%; /* Full width */
   background-color: #ffffff;
@@ -92,6 +95,11 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
   border-radius: 8px; /* Rounded corners */
   margin: 0 1rem; /* Spacing between cards */
+  transition: transform 0.3s ease;
+}
+
+.pricing-card-content:hover {
+  transform: translateY(-5px); /* Slight hover effect */
 }
 
 .pricing-card-content ul {
@@ -170,12 +178,16 @@
 .plan-btn:hover {
   background-color: #111827;
   color: #ffffff;
+  transform: translateY(-3px); /* Hover effect */
 }
+
+/* === FEATURE LIST === */
 
 .feature-list {
   margin-top: 1.5rem;
   text-align: left;
 }
+
 .feature-list div {
   display: flex;
   align-items: center;
@@ -198,7 +210,19 @@
     width: 100%;
     margin: 10px 0;
   }
+
   .plan-btn {
     font-size: 1.1rem;
+  }
+
+  .pricing-full-width {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-card-content {
+    width: 100%; /* Full width on smaller screens */
+    margin-bottom: 2rem;
   }
 }

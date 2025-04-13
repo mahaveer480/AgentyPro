@@ -99,10 +99,10 @@
     border-radius: 50%;
     width: 40px;
     height: 40px;
-  }
+  } 
   
   /* Responsive: Mobile layout */
-  /* @media (max-width: 768px) {
+ /* @media (max-width: 768px) {
     .inbox-container {
       flex-direction: column;
     }
@@ -116,4 +116,4 @@
       width: 100%;
     }
   }
-   */ 
+    */

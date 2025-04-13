@@ -1,92 +1,139 @@
 /* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  .navbar {
-    width: 100%;
-    border-bottom: 1px solid #e6e6e6;
-    padding: 1rem 2rem;
-    background-color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  width: 100%;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 1rem 2rem;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-inner {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: auto;
+  position: relative;
+}
+
+/* Logo */
+.navbar-logo img {
+  height: 30px;
+}
+
+/* Hamburger icon */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+/* Links */
+.navbar-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #1b1e2e;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/* Buttons */
+.navbar-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.signup-btn,
+.login-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.signup-btn {
+  background-color: white;
+  border: 1px solid #ccc;
+}
+
+.login-btn {
+  background-color: #000;
+  color: white;
+  border: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
   .navbar-inner {
-    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-top {
+    display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    max-width: 1400px;
-    margin: auto;
   }
-  
-  .navbar-logo img {
-    height: 30px;
+
+  .menu-toggle {
+    display: block;
   }
-  
-  /* Links */
-  .navbar-links {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-  }
-  
-  .navbar-links a {
-    text-decoration: none;
-    color: #1b1e2e;
-    font-weight: 600;
-    font-size: 20px;
-  }
-  
-  /* Buttons */
+
+  .navbar-links,
   .navbar-actions {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar-links.show-menu,
+  .navbar-actions.show-menu {
     display: flex;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    padding: 1rem 0;
     gap: 10px;
   }
-  
-  .signup-btn {
-    padding: 8px 16px;
-    background-color: white;
-    border: 1px solid #d1d1d1;
-    border-radius: 6px;
-    cursor: pointer;
+
+  .navbar-links li {
+    width: 100%;
   }
-  
+
+  .navbar-links li a {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #f7fafa;
+    border-radius: 10px;
+    color: #1b1e2e;
+    font-weight: 500;
+  }
+
+  .navbar-actions {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .signup-btn,
   .login-btn {
-    padding: 8px 16px;
-    background-color: #0f172a;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
+    width: 100%;
+    border-radius: 10px;
   }
-  
-  /* Responsive */
-  
-  /* Tablet */
-  @media (max-width: 1024px) {
-    .navbar-links,
-    .navbar-actions {
-      display: none;
-    }
-  
-    .navbar-inner {
-      justify-content: center;
-    }
-  }
-  
-  /* Mobile */
-  @media (max-width: 768px) {
-    .navbar-inner {
-      justify-content: space-between;
-    }
-  
-    .navbar-logo {
-      justify-content: flex-start;
-    }
-  }
-  
+}

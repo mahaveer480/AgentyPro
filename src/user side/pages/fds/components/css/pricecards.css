@@ -1,111 +1,137 @@
+/* Global Reset */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f9fafb;
-    padding: 40px 20px;
-  }
-  
-  .pricing-section {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  @media (min-width: 768px) {
-    .pricing-section {
-      flex-direction: row;
-    }
-  }
-  
-  .card {
-    background-color: #fff;
-    border-radius: 16px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-    padding: 24px;
-    flex: 1;
-    transition: all 0.3s ease;
-  }
-  
-  .card:hover {
-    background: rgba(106, 128, 181, 1);
-  }
-  
-  .card.highlight {
-    background: rgba(106, 128, 181, 1);
-    transform: scale(1.05);
-  }
-  
-  .card.highlight:hover {
-    transform: scale(1.1);
-  }
-  
-  .card h3 {
-    font-size: 1rem;
-    text-align: left;
-    margin-bottom: 10px;
-  }
-  
-  .card p {
-    text-align: center;
-    font-size: 0.9rem;
-    color: bkack;
-    margin-bottom: 15px;
-  }
-  
-  .price {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 16px;
-  }
-  
-  .price span {
-    font-size: 1rem;
-    font-weight: normal;
-  }
-  
-  .btn {
-    display: block;
-    background: rgba(255, 255, 255, 1);
-    color:rgba(106, 128, 181, 1);
-    text-align: center;
-    padding: 10px;
-    border-radius: 4px;
-    text-decoration: none;
-    margin-bottom: 24px;
-    transition: background-color 0.3s;
-    border: 1.5px
-
-  }
-  
-  .btn:hover {
-    background: rgba(106, 128, 181, 1);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-  
-  .features {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9fafb;
+  padding: 40px 20px;
+}
+
+/* Pricing Section */
+.pricing-section {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .pricing-section {
+    flex-direction: row;
   }
-  
-  .features li {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    font-size: 0.95rem;
+}
+
+/* Card Styling */
+.card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  flex: 1;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  background: rgba(106, 128, 181, 0.1);
+  transform: translateY(-5px); /* Slight lift effect */
+}
+
+.card.highlight {
+  background: rgba(106, 128, 181, 1);
+  transform: scale(1.05);
+}
+
+.card.highlight:hover {
+  transform: scale(1.1);
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #1f2a5a;
+}
+
+.card p {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1f2a5a;
+  margin-bottom: 16px;
+}
+
+.price span {
+  font-size: 1rem;
+  font-weight: normal;
+  color: #555;
+}
+
+/* Button Styling */
+.btn {
+  display: block;
+  background: #fff;
+  color: rgba(106, 128, 181, 1);
+  text-align: center;
+  padding: 12px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-bottom: 24px;
+  border: 1.5px solid rgba(106, 128, 181, 1);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: rgba(106, 128, 181, 1);
+  color: #fff;
+  transform: translateY(-3px); /* Hover lift effect */
+}
+
+/* Features List */
+.features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.features img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive Styling for Mobile */
+@media (max-width: 600px) {
+  .card {
+    padding: 20px;
   }
-  
-  .features img {
-    width: 20px;
-    height: 20px;
-    margin-top: 2px;
+
+  .price {
+    font-size: 2rem;
   }
-  
+
+  .btn {
+    padding: 10px;
+    font-size: 1rem;
+  }
+}

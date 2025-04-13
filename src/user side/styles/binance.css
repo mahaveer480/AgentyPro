@@ -1,343 +1,328 @@
 /* Base styles */
 .binance-container {
-    background-color: white;
-    margin: 20px 18%;
-    padding: 2rem;
-    font-family: sans-serif;
-  }
-  
-  .section-title {
-    font-weight: 500;
-    font-size: 32px;
-  }
-
-  .logo-upload-main{
-
-    display: flex;
-    /* align-items: center; */
- 
-    flex-direction: column; 
-    /* justify-content: space-between; */
-  }
-
-
-  
-  .logo-upload {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 1rem;
-    gap: 1rem;
-  }
-  
-  .logo-upload div {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo-upload div p {
-    font-weight: 400;
-    font-size: 24px;
-    margin-left: 20px;
-  }
-  
-  .logo-placeholder {
-    width: 200px;
-    height: 200px;
-    /* border: 1px solid #ccc; */
-    border-radius: 10px;
-    background-color: #f5f5f5;
-  }
-  
-  .upload-btn {
-    background-color: rgba(29, 42, 69, 1);
-    color: white;
-    width: 237px;
-    height: 69px;
-    border-radius: 12px;
-    font-weight: 400;
-    font-size: 24px;
-    font-family: Inter, sans-serif;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .form-section {
-    margin-top: 2rem;
-  }
-  
-  .input-label {
-    font-weight: 700;
-    font-size: 20px;
-    display: block;
-    margin-top: 1rem;
-  }
-  
-
-
-  .form-section{
-width: 75%;
-display: flex;
-justify-content: flex-end;
-flex-direction: column;
-margin-top: 0px;
-
-  }
-  
-
-  .form-section-main{
-
-    display: flex;
-    justify-content: flex-end;
-  }
-
-
-  .select-box {
-    border: 1.25px solid rgba(0, 0, 0, 0.47);
-    border-radius: 10px;
-    padding: 12.5px;
-    font-weight: 400;
-    font-size: 24px;
-    color: rgba(0, 0, 0, 0.47);
-    margin-top: 0.3rem;
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .divider {
-    margin: 2rem 0;
-  }
-  
-  .sub-heading {
-    font-size:20px;
-    color: gray;
-    font-weight: 500;
-  }
-  
-  .integration-section {
-    margin-top: 1rem;
-  }
-
-
-  
-  .integration-row {
-    display: flex;
-    flex-direction: row !important;
-    justify-content: space-between !important;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
-
-
-  .integration-row span,
-  .crm-input p,
-  .day-toggle-span{
-
-    font-weight: 500;
-    font-size: 24px;
-    color: rgba(0, 0, 0, 1);
-  }
-  
-  .connect-btn {
-    background-color: #0a1930;
-    color: white;
-    padding: 0.4rem 1rem;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-    padding: 0.6rem;
-    width: 25%;
-    height: 51.24px;
-    
+  background-color: white;
+  margin: 20px 18%;
+  padding: 2rem;
+  font-family: 'Inter', sans-serif;
 }
+
+/* Section title */
+.section-title {
+  font-weight: 500;
+  font-size: 32px;
+}
+
+/* Logo Upload Section */
+.logo-upload-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-upload {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.logo-upload div {
+  display: flex;
+  align-items: center;
+}
+
+.logo-upload div p {
+  font-weight: 400;
+  font-size: 24px;
+  margin-left: 20px;
+}
+
+.logo-placeholder {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+/* Upload Button */
+.upload-btn {
+  background-color: rgba(29, 42, 69, 1);
+  color: white;
+  width: 237px;
+  height: 69px;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(29, 42, 69, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.upload-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.1), rgba(255,255,255,0.3));
+  transition: all 0.5s ease-in-out;
+}
+
+.upload-btn:hover::before {
+  left: 100%;
+}
+
+.upload-btn:hover {
+  background-color: rgba(22, 32, 53, 1);
+  box-shadow: 0 12px 32px rgba(29, 42, 69, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Form Section */
+.form-section-main {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form-section {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dropdown */
+.dropdown-container {
+  position: relative;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.select-box {
+  border: 1.25px solid rgba(0, 0, 0, 0.47);
+  border-radius: 10px;
+  padding: 12.5px;
+  font-weight: 400;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.47);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  transition: all 0.3s ease;
+  margin-top: 0.3rem;
+}
+
+.select-box.active {
+  border-color: rgba(29, 42, 69, 0.8);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-arrow {
+  font-size: 20px;
+  color: #333;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-top: 5px;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scaleY(0.9); }
+  to { opacity: 1; transform: scaleY(1); }
+}
+
+.dropdown-item {
+  padding: 12px 16px;
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+/* Inputs & Labels */
+.input-label {
+  font-weight: 700;
+  font-size: 20px;
+  display: block;
+  margin-top: 1rem;
+}
+
+.crm-input {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.crm-input input {
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  height: 65px;
+  font-size: 24px;
+  width: 50%;
+}
+
+/* Integration Settings */
+.integration-section {
+  margin-top: 1rem;
+}
+
+.integration-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.integration-row span,
+.crm-input p,
+.day-toggle-span {
+  font-weight: 500;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 1);
+}
+
+/* Toggle Section */
+.day-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.day-toggle div {
+  display: flex;
+}
+
+.badge {
+  color: rgba(0, 0, 0, 0.43) !important;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  margin-right: 1rem;
+  background-color: rgba(248, 250, 252, 1);
+}
+
+/* Buttons */
+.connect-btn,
+.save-btn,
+.cancel-btn {
+  height: 51.24px;
+  width: 25%;
+  padding: 0.6rem;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.connect-btn,
 .save-btn {
-    background-color: #0a1930;
-    color: white;
-    padding: 0.4rem 1rem;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-    padding: 0.6rem;
-    width: 25%;
-    height: 51.24px;
+  background-color: #0a1930;
+  color: white;
 }
 
 .cancel-btn {
   background-color: #e0e0e0;
   color: #333;
-  padding: 0.4rem 1rem;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-    padding: 0.6rem;
-    width: 25%;
-    height: 51.24px;
-
-  cursor: pointer;
 }
+
+.action-buttonseditsave {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Custom Switch Styling */
+#switchCheckDefault {
+  background-color: rgba(29, 42, 69, 1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .binance-container {
+    margin: 20px 5%;
+    padding: 1rem;
+  }
+
+  .section-title {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .form-section {
+    width: 100%;
+  }
+
+  .logo-upload {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo-upload div {
+    margin-bottom: 1rem;
+  }
+
+  .logo-upload div p {
+    font-size: 18px;
+    margin-left: 15px;
+  }
+
+  .logo-placeholder {
+    width: 120px;
+    height: 120px;
+  }
+
+  .upload-btn {
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    padding: 1rem;
+  }
 
   .crm-input input {
-    padding: 0.6rem;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    /* width: 100%; */
-    height: 65px;
-    font-size: 24px;
-    width: 50%;
+    width: 65%;
+    font-size: 18px;
   }
-  
-  .crm-input {
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: space-between;
-}
 
-.day-toggle {
-    display: flex;
-    flex-direction: row !important;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-  }
-  
-  .badge {
-    color: rgba(0, 0, 0, 0.43) !important;
-    padding: 0.4rem 0.8rem;
-    border-radius: 6px;
-    margin-right: 1rem;
-    background-color: rgba(248, 250, 252, 1);
-  }
-  
-  .action-buttons {
-    display: flex;
-    justify-content: flex-end;
+  .integration-row,
+  .day-toggle,
+  .action-buttonseditsave {
+    flex-direction: column;
+    align-items: stretch;
     gap: 1rem;
-    margin-top: 2rem;
-  }
-  
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    .binance-container {
-      margin: 20px 5%;
-      padding: 1rem;
-    }
-
-
-
-    .form-section{
-
-width: 100%;
-
-    }
-
-
-
-  
-    .section-title {
-      font-size: 24px;
-      text-align: center;
-    }
-  
-    .logo-upload-main{
-
-
-
-    }
-
-
-    .logo-upload {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .logo-upload div {
-      margin-bottom: 1rem;
-    }
-  
-    .logo-upload div p {
-      font-size: 18px;
-      margin-left: 15px;
-    }
-  
-    .logo-placeholder {
-      width: 120px;
-      height: 120px;
-    }
-  
-    .upload-btn {
-      width: 100%;
-      height: auto;
-      font-size: 18px;
-      padding: 1rem;
-    }
-  
-
-    .integration-row{
-        display: flex;justify-content: space-between;
-    }
-
-    .integration-row,
-    .day-toggle,
-    .action-buttons {
-      flex-direction: column;
-      align-items: stretch;
-      display: flex;
-    justify-content: space-between !important;
-
-    }
-  
-    .connect-btn{
-        width: 35%;
-        font-size: 16px;
-        padding: 0.75rem;
-
-    }
-    .save-btn,
-    .cancel-btn {
-      width: 50%;
-      font-size: 16px;
-      padding: 0.75rem;
-  
-    }
-
-    .crm-input input {
-      padding: 0.6rem;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      /* width: 100%; */
-      height: 65px;
-      font-size: 24px;
-      width: 65%;
-    }
-
-
-
-
-    .select-box {
-      font-size: 14px;
-    }
-  
-    .action-buttons {
-      gap: 0.75rem;
-      display: flex;
-      flex-direction: row;
-    }
-  }
-  #switchCheckDefault{
-
-background-color: rgba(29, 42, 69, 1);
-
   }
 
-
-
-  .day-toggle div{
-    display: flex;
-
-
-
+  .connect-btn,
+  .save-btn,
+  .cancel-btn {
+    width: 100%;
+    font-size: 16px;
+    padding: 0.75rem;
   }
+
+  .select-box {
+    font-size: 16px;
+  }
+}

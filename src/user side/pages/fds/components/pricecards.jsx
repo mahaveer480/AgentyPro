@@ -2,6 +2,24 @@ import React from "react";
 import "./css/pricecards.css"; // CSS in a separate file
 import righticon from '../assets/icons/right.png'
 const plans = [
+  
+  {
+    title: "Plan Free",
+    subtitle: "For Testing the Power of Talkeen",
+    price: "$0",
+    features: [
+      "Up to 10 conversations/month",
+      "Up to 2 minutes of human-like AI voice calls",
+      "Access to 1 prebuilt funnel by industry",
+      "Integration with WhatsApp Business only",
+      "Basic CRM included",
+      "No voice cloning (default voice only)",
+      "No multi-user access",
+      "No onboarding meeting (self-guided tutorials only)"
+    ]
+  },
+  
+  
   {
     title: "Starter Plan",
     subtitle: "All Essentials to Start Automating",
