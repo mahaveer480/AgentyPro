@@ -228,6 +228,23 @@
 }
 
 /* ========== RESPONSIVE STYLES (MAX WIDTH: 844px) ========== */
+@media (min-width: 1300px) {
+
+  .header_Container{
+    margin-left: 85px;
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
 @media (max-width: 844px) {
   /* Show Mobile Sidebar, Hide Desktop Sidebar */
   .mobile_sidebar {

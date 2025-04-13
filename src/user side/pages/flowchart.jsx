@@ -16,7 +16,30 @@ export default function Telephone() {
     <>
       <SideNavigation />
       <div className="flow-container">
-        <h2 className="flow-title">Voice Call Flow</h2>
+
+
+
+
+      <div className="Channel_Management" style={{paddingLeft:"85px"}}>
+           <h2 className="Channel_Management_Title">Voice Call Flow</h2>
+
+            <div className="search-container">
+             <input type="text" className="search-bar-with-icon" placeholder="Search settings..."/>
+             <span className="search-icon">
+            
+              {/* Or use an SVG/icon here if preferred */}
+           </span>
+           </div>
+         </div>
+
+
+
+
+
+
+
+
+
         <div className="flow-grid">
           {/* Left Section */}
           <div className="flow-settings">

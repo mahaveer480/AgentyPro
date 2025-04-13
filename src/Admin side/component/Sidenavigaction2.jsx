@@ -12,7 +12,7 @@
     const location = useLocation();
 
     const navItems = [
-      { id: "dashboard", label: "Dashboard", path: "/Admindeshboard", icon: dashboardIcon },
+      { id: "dashboard", label: "Dashboard", icon: dashboardIcon },
       { id: "client-accounts", label: "Client Accounts", path: "/client-accounts" },
       { id: "client-management", label: "Client Management", path: "/client-management" },
       { id: "client-details", label: "Client Details", path: "/client-details" },

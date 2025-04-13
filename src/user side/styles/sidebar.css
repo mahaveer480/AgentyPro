@@ -1,91 +1,106 @@
+/* Sidebar styling */
 .side-nav {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 70px;
-    height: 92vh;
-    background: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 0;
-  }
-  
-  #agentyprologo {
-    width: 35px;
-    height: 35px;
-    /* margin-bottom: 10px; */
-  }
-  
-  .top-items,
-  .bottom-items {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    
-  }
-  
-  .nav-item-container {
-    position: relative;
-    margin: 8px 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .nav-item {
-    width: 30px;
-    height: 30px;
-    background: transparent;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .nav-icon {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-  }
-  
-  .is-active .nav-icon {
-    filter: brightness(1.1);
-  }
-  
-  .active-indicator-circle {
-    position: absolute;
-    left: -56px;
-    top: -5px;
-    width: 45px;
-    height: 45px;
-    border-radius: 8px;
-    background-color: rgba(0, 108, 255, 1);
-    transform: rotate(45deg);
-  }
-  /* sidebar.css */
-
-.side-nav {
+  position: fixed;
+  top: 0;
+  left: -100px; /* hidden by default on small screens */
   width: 80px;
-  background-color: #fff;
   height: 96vh;
+  background: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   padding: 20px 0;
-  position: fixed;
-  left: 0;
-  top: 0;
   z-index: 1000;
   transition: all 0.3s ease;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
 }
 
-/* Hide sidebar on small screens */
-@media (max-width: 1300px) {
-  .side-nav {
-    display: none;
+.side-nav.show {
+  left: 0;
+}
+
+#agentyprologo {
+  width: 35px;
+  height: 35px;
+  margin-bottom: 10px;
+}
+
+.top-items,
+.bottom-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-item-container {
+  position: relative;
+  margin: 8px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item {
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.is-active .nav-icon {
+  filter: brightness(1.1);
+}
+
+.active-indicator-circle {
+  position: absolute;
+  left: -56px;
+  top: -5px;
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
+  background-color: rgba(0, 108, 255, 1);
+  transform: rotate(45deg);
+}
+
+/* Toggle button (hamburger icon) */
+.sidebar-toggle-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 30px;
+  height: 30px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  border: none;
+  z-index: 1100;
+  cursor: pointer;
+  padding: 0;
+}
+
+.sidebar-toggle-btn .bar {
+  width: 100%;
+  height: 4px;
+  background-color: #333;
+  border-radius: 2px;
+}
+
+/* Show toggle button and hide sidebar on smaller screens */
+@media (max-width: 1200px) {
+  .sidebar-toggle-btn {
+    display: flex;
   }
 }

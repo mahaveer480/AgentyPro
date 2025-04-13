@@ -18,14 +18,25 @@ import Clintmanagement from "./Admin side/pages/Clintmanagement";
 import Wallettracastion from "./Admin side/pages/Wallettracastion";
 import Homepage from "./user side/pages/homepage";
 import Deshboard2 from "./Admin side/pages/Dashboard"
+import Planmanagement from "./Admin side/pages/planmanagement";
+import Needhelp from "./user side/components/needhelp";
+import Loginpage from "./user side/pages/Login";
+import Signup from "./user side/pages/signup";
+import Forgotpassword from "./user side/pages/forgotpassword";
+import Adminpanelrow from "./Admin side/component/adminpanelrow";
+import InboxPage from "./user side/pages/inbox";
 function App() {
   return (
     <Router>
+<Needhelp/>
+{/* <Adminpanelrow/> */}
+{/* <InboxPage/> */}
       {/* <SideNavigation2 /> */}
       <Routes>
         {/* User side routes */}
-        <Route path="/" element={<Homepage/>} />
-
+        <Route path="/" element={<Signup />} />
+        <Route path="/inboxpage" element={<InboxPage />} />
+        <Route path="/homepage" element={<Homepage/>} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/paste" element={<Paste />} />
@@ -33,6 +44,8 @@ function App() {
         <Route path="/binance" element={<Binance />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/logout" element={<Logout />} />
+        <Route path="/login" element={<Loginpage />} />
+        <Route path="/forgotpassword" element={<Forgotpassword />} />
         <Route path="/Sidebar" element={<Sidebar />} />
         <Route path="/setting1" element={<SettingComponent />} />
         
@@ -43,7 +56,7 @@ function App() {
         <Route path="/client-management" element={<Clintmanagement />} />
         <Route path="/client-details" element={<ClintDetails />} />
         <Route path="/wallet" element={<Wallettracastion />} />
-        <Route path="/plan-management" element={<Clintmanagement />} />
+        <Route path="/plan-management" element={<Planmanagement />} />
         <Route path="/help" element={<Help />} />
       </Routes>
     </Router>

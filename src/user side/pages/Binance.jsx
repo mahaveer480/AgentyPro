@@ -9,11 +9,20 @@ export default function Binance() {
   return (<>
 
   <SideNavigation/>
-    <div className="binance-container">
-      <h2 className="section-title">General</h2>
+      <div className="Channel_Management"style={{paddingLeft:"85px"}}>
+           <h2 className="Channel_Management_Title">General</h2>
 
+            <div className="search-container">
+             <input type="text" className="search-bar-with-icon" placeholder="Search settings..."/>
+             <span className="search-icon">
+            
+              {/* Or use an SVG/icon here if preferred */}
+           </span>
+           </div>
+         </div>
      
-     
+    <div className="binance-container">
+
      
      <div className="logo-upload-main" >
       <div className="logo-upload">

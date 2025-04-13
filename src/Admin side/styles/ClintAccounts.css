@@ -46,14 +46,14 @@ width: 100%;
     margin-bottom: 2rem;
   }
   
-  .client-table {
+  .client-table1 {
     width: 100%;
     border-collapse: collapse;
     margin-top: 1rem;
   }
   
-  .client-table th,
-  .client-table td {
+  .client-table1 th,
+  .client-table1 td {
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #e2e8f0;

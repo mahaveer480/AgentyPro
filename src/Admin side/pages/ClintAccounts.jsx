@@ -1,17 +1,19 @@
 import React from 'react';
 import SideNavigation2 from '../component/Sidenavigaction2';
 import '../styles/ClintAccounts.css'; // Create this CSS file
+import Adminpanelrow from '../component/adminpanelrow';
 
 export default function ClintAccounts() {
   return (
     <div className="client-accounts-wrapper">
       <SideNavigation2 />
+      {/* <Adminpanelrow/> */}
       <div className="client-accounts-content">
         <h2 className="admin-panel-heading">Admin Panel</h2>
 <hr id='hr' />
           <h3 id='admin-panel-headingh3'>Client Accounts</h3>
         <div className="main-card">
-          <table className="client-table">
+          <table className="client-table1">
             <thead>
               <tr>
                 <th>Client</th>
@@ -58,12 +60,15 @@ export default function ClintAccounts() {
         <div className="bottom-section">
           <div className="pricing-card">
             <h4>Set Pricing Rules</h4>
-            <hr />
             <ul>
-              <li><p>per token  </p><strong>$0.002</strong></li>
+              <hr />
+              <li><p>Channel </p> <strong>Price</strong></li>
             <hr />
+              <li><p>per token  </p><strong>$0.002</strong></li>
+              <hr />
               
               <li><p>per minute </p> <strong>$0.05</strong></li>
+              
             </ul>
           </div>
           <div className="alerts-card">

@@ -8,6 +8,11 @@ export default function paste() {
   return (
     <>
     <SideNavigation/>
+
+  
+
+
+
       {/* Main Container */}
       <section className='agent-mgmt_container'>
         {/* Sidebar placeholder (visible >1200px) */}
@@ -24,23 +29,35 @@ export default function paste() {
                 className="agent-mgmt-search-input"
                 placeholder="Search settings..."
               />
-              <span className="agent-mgmt-search-icon">🔍</span>
+              <span className="agent-mgmt-search-icon"></span>
             </div>
           </header> */}
+
+
+<div className="Channel_Management" style={{paddingLeft:"85px"}}>
+           <h2 className="Channel_Management_Title">AI Agent Management</h2>
+
+            <div className="search-container">
+             <input type="text" className="search-bar-with-icon" placeholder="Search settings..."/>
+             <span className="search-icon">
+            
+              {/* Or use an SVG/icon here if preferred */}
+           </span>
+           </div>
+         </div>
+
 
           {/* Page Wrapper */}
           <div className="agent-mgmt-wrapper">
             {/* Mobile Header */}
             <div className="agent-mgmt-mobile-header">
               <button className="agent-mgmt-back-btn">←</button>
-              <h2>AI Agent Management</h2>
             </div>
 
             {/* Desktop Layout */}
             <div className="agent-mgmt-desktop-view">
               {/* Sidebar Bot Cards */}
               <div className="agent-mgmt-sidebar-panel">
-                <h2 className="agent-mgmt-title">AI Agent Management</h2>
                 <div className="agent-mgmt-bot-list">
                   {['Sales Bot', 'Price Bot', 'Support Bot', 'Info Bot'].map((bot, i) => (
                     <div key={i} className="agent-mgmt-bot-card">

@@ -38,7 +38,7 @@ const Cart = () => {
 
   return (
     <>
-      <div className="header_Container" style={{marginLeft:"85px"}}>
+      <div className="header_Container" >
         {/* Left sidebar (hidden on mobile) */}
         <div className="  ">
           <SideNavigation/>
@@ -46,13 +46,13 @@ const Cart = () => {
 
         <div className="Rightsection">
           {/* Top Header Section */}
-          <div className="Channel_Management">
+          <div className="Channel_Management" style={{paddingLeft:"85px"}}>
            <h2 className="Channel_Management_Title">Channel Management</h2>
 
             <div className="search-container">
              <input type="text" className="search-bar-with-icon" placeholder="Search settings..."/>
              <span className="search-icon">
-            🔍
+            
               {/* Or use an SVG/icon here if preferred */}
            </span>
            </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "../styles/sidebar.css";
 import logout from "../images/logout.png";
@@ -13,6 +13,24 @@ import agentyproLogo from "../images/agentyproLogo.png";
 function SideNavigation() {
   const navigate = useNavigate();
   const location = useLocation();
+  const [showSidebar, setShowSidebar] = useState(window.innerWidth >= 1200);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setShowSidebar(window.innerWidth >= 1200);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleToggleSidebar = () => {
+    if (!showSidebar) {
+      setShowSidebar(true);
+      setTimeout(() => {
+        setShowSidebar(false);
+      }, 5000);
+    }
+  };
 
   const navItems = [
     { id: "dashboard", img: desktop, path: "/dashboard" },
@@ -27,7 +45,6 @@ function SideNavigation() {
     { id: "logout", img: logout, path: "/logout" },
   ];
 
-  // Determine active path based on current location
   const getActiveId = () => {
     const allItems = [...navItems, ...bottomNavItems];
     const active = allItems.find((item) => location.pathname.startsWith(item.path));
@@ -54,13 +71,21 @@ function SideNavigation() {
     ));
 
   return (
-    <nav className="side-nav">
-      <div>
-        <img src={agentyproLogo} id="agentyprologo" alt="logo" />
-        <div className="top-items">{renderNavItems(navItems)}</div>
-      </div>
-      <div className="bottom-items">{renderNavItems(bottomNavItems)}</div>
-    </nav>
+    <>
+      <button className="sidebar-toggle-btn" onClick={handleToggleSidebar}>
+        <div className="bar" />
+        <div className="bar" />
+        <div className="bar" />
+      </button>
+
+      <nav className={`side-nav ${showSidebar ? "show" : ""}`}>
+        <div>
+          <img src={agentyproLogo} id="agentyprologo" alt="logo" />
+          <div className="top-items">{renderNavItems(navItems)}</div>
+        </div>
+        <div className="bottom-items">{renderNavItems(bottomNavItems)}</div>
+      </nav>
+    </>
   );
 }
 
