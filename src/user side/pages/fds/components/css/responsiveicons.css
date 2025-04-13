@@ -1,0 +1,61 @@
+.logos-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .top-text {
+    font-size: 1rem;
+    color: #6c7280;
+    margin-bottom: 20px;
+  }
+  
+  /* Mobile layout visible only on small screens */
+  .mobile-layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .mobile-layout img {
+    width: 100px;
+    height: auto;
+  }
+  
+  /* Desktop layout hidden by default */
+  .desktop-layout {
+    display: none;
+  }
+  
+  .powered-text {
+    font-size: 1rem;
+    color: #6c7280;
+    margin-bottom: 20px;
+  }
+  
+  .icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .icons img {
+    width: 50px;
+    height: auto;
+  }
+  
+  /* MEDIA QUERY FOR DESKTOP VIEW */
+  @media screen and (min-width: 992px) {
+    .mobile-layout {
+      display: none;
+    }
+  
+    .desktop-layout {
+      display: block;
+    }
+  
+    .top-text {
+      display: none;
+    }
+  }
+  

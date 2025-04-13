@@ -49,10 +49,10 @@ export default function Loginpage() {
             I agree to the <Link id='setcolorblack2' to={"/setting1"}>Terms & Conditions</Link> 
           </label>
 
-          <Link to={'/homepage'}>  <button className="create-btn">Create account</button></Link>
+          <Link to={'/dashboard'}>  <button className="create-btn">Create account</button></Link>
 
           <p className="sign-in-text">
-            Already had an account? <Link id='setcolorblack' to={"/"}>Sign in</Link>
+            Already had an account? <Link id='setcolorblack' to={"/signup"}>Sign in</Link>
           </p>
         </div>
       </div>

@@ -52,7 +52,7 @@ export default function ClintDetails() {
           </div>
 
           <div className="action-buttons">
-            <button className="plan-btn">Plan</button>
+            <button className="plan-btn2">Plan</button>
             <button className="disable-btn">Disable</button>
             <button className="edit-btn">Edit</button>
             <button className="message-btn">Send Message</button>

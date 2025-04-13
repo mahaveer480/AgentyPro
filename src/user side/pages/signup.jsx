@@ -50,7 +50,7 @@ export default function Signuppage() {
             <Link id="signup-link2" to="/forgotpassword">Forgot password?</Link>
           </label>
 
-          <Link to={'/homepage'}>  <button className="signup-button">Sign Up</button></Link>
+          <Link to={'/dashboard'}>  <button className="signup-button">Sign Up</button></Link>
 
           <p className="signup-switch-text">
             Already have an account? <Link id="signup-link" to="/login">Log in</Link>

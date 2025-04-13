@@ -34,9 +34,9 @@ function App() {
       {/* <SideNavigation2 /> */}
       <Routes>
         {/* User side routes */}
-        <Route path="/" element={<Signup />} />
+        <Route path="/" element={<Homepage/>} />
+        <Route path="/signup" element={<Signup/>} />
         <Route path="/inboxpage" element={<InboxPage />} />
-        <Route path="/homepage" element={<Homepage/>} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/paste" element={<Paste />} />

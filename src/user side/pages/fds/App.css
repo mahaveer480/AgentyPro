@@ -1,0 +1,81 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  max-width: 100%; /* Ensures logo doesn't overflow its container */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 20px; /* Added padding to prevent content from touching edges */
+  box-sizing: border-box; /* Ensure padding is included in width/height calculations */
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Media queries for responsive design */
+
+/* For mobile and small screens */
+@media (max-width: 600px) {
+  .App-header {
+    font-size: calc(12px + 2vmin); /* Slightly larger font for readability on mobile */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .App-logo {
+    height: 30vmin; /* Reduce logo size on mobile devices */
+  }
+
+  .App-link {
+    font-size: 1.2rem; /* Increase font size for links on smaller screens */
+  }
+}
+
+/* For tablets (between 600px and 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .App-header {
+    font-size: calc(12px + 1.5vmin); /* Adjust font size for medium screens */
+  }
+
+  .App-logo {
+    height: 35vmin; /* Adjust logo size for medium screens */
+  }
+}
+
+/* For larger screens (desktops) */
+@media (min-width: 1025px) {
+  .App-header {
+    font-size: calc(12px + 1vmin); /* Adjust font size for larger screens */
+  }
+
+  .App-logo {
+    height: 40vmin; /* Default size for desktop */
+  }
+}

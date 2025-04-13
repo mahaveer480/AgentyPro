@@ -1,0 +1,43 @@
+.display-wrapper {
+  /* width: 150%; */
+  display: flex;
+  justify-content: center;
+  /* padding: 2rem; */
+  background: white;
+}
+
+/* Image container with smooth scaling and shadow */
+.image-container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+/* Shadow */
+
+
+/* Display control */
+.pc-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+/* Responsive media query */
+@media (max-width: 1024px) {
+  .pc-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+}
