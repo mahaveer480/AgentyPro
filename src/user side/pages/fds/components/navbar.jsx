@@ -2,48 +2,37 @@ import React, { useState } from 'react';
 import './css/nav.css';
 import Talkeen from '../assets/talkeenlogo.png';
 import { Link } from 'react-router-dom';
-import { FiMenu } from 'react-icons/fi';
 
 const Navbardeshtop = () => {
-  const [showMenu, setShowMenu] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
 
-  const toggleMenu = () => setShowMenu(!showMenu);
-
-  const handleLinkClick = () => {
-    setTimeout(() => {
-      setShowMenu(false);
-    }, 5000); // 5 seconds
+  const toggleDropdown = () => {
+    setShowDropdown(!showDropdown);
   };
 
   return (
     <nav className="navbar">
       <div className="navbar-inner">
-        {/* Top row: Logo + Hamburger */}
-        <div className="navbar-top">
-          <div className="navbar-logo">
-            <img src={Talkeen} alt="Talkeen Logo" />
-          </div>
-
-          <div className="menu-toggle" onClick={toggleMenu}>
-            <FiMenu size={24} />
-          </div>
+        <div className="navbar-left">
+          <img src={Talkeen} alt="SaleRush Logo" className="navbar-logo" />
         </div>
+        <ul className="navbar-center">
+  <li><a href="#Hometext">Home</a></li>
+  <li><a href="#about">About Us</a></li>
+  <li className="dropdown" onClick={toggleDropdown}>
+    <a href="#">Pages ▾</a>
+    <ul className={`dropdown-menu ${showDropdown ? 'show' : ''}`}>
+      <li><Link to="/dashboard">Desktop</Link></li>
+      <li><Link to="/clients">Clients</Link></li>
+      <li><Link to="/settings">Settings</Link></li>
+    </ul>
+  </li>
+  <li><a href="#pricing">Pricing</a></li>
+</ul>
 
-        {/* Menu Links */}
-        <ul className={`navbar-links ${showMenu ? 'show-menu' : ''}`}>
-          <li><a href="#" onClick={handleLinkClick}>Features</a></li>
-          <li><a href="#" onClick={handleLinkClick}>Case Studies</a></li>
-          <li><a href="#" onClick={handleLinkClick}>Pricing</a></li>
-          <li><a href="#" onClick={handleLinkClick}>Applications</a></li>
-        </ul>
-
-        {/* Signup/Login Buttons */}
-        <div className={`navbar-actions ${showMenu ? 'show-menu' : ''}`}>
-          <Link to="/signup" onClick={handleLinkClick}>
-            <button className="signup-btn">Signup</button>
-          </Link>
-          <Link to="/login" onClick={handleLinkClick}>
-            <button className="login-btn">Login</button>
+        <div className="navbar-right">
+          <Link to="/signup">
+            <button className="signup-button-nav">Sign Up</button>
           </Link>
         </div>
       </div>

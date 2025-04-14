@@ -1,72 +1,47 @@
 import React from 'react';
-import SideNavigation from '../components/sidebar'
-import '../styles/paste.css'
+import SideNavigation from '../components/sidebar';
+import '../styles/paste.css';
 import robot from '../images/robot.png';
 import whatsapp from '../images/whatsapp.png';
 
-export default function paste() {
+export default function Paste() {
   return (
     <>
-    <SideNavigation/>
-
-  
-
-
+      <SideNavigation />
 
       {/* Main Container */}
-      <section className='agent-mgmt_container'>
-        {/* Sidebar placeholder (visible >1200px) */}
+      <section className="agent-mgmt_container">
         <div className="agent-mgmt-sidebar">Sidebar content</div>
 
-        {/* Main content area */}
         <div style={{ width: "100%" }}>
-          {/* Desktop Header */}
-          {/* <header className="agent-mgmt-header">
-            <h2>AI Agent Management</h2>
-            <div className="agent-mgmt-search-container">
-              <input
-                type="text"
-                className="agent-mgmt-search-input"
-                placeholder="Search settings..."
-              />
-              <span className="agent-mgmt-search-icon"></span>
-            </div>
-          </header> */}
-
-
-<div className="Channel_Management" style={{paddingLeft:"85px"}}>
-           <h2 className="Channel_Management_Title">AI Agent Management</h2>
-
+          {/* Page Title and Search */}
+          <div className="Channel_Management" style={{ paddingLeft: "85px" }}>
+            <h2 className="Channel_Management_Title">AI Agent Management</h2>
             <div className="search-container">
-             <input type="text" className="search-bar-with-icon" placeholder="Search settings..."/>
-             <span className="search-icon">
-            
-              {/* Or use an SVG/icon here if preferred */}
-           </span>
-           </div>
-         </div>
+              <input type="text" className="search-bar-with-icon" placeholder="Search settings..." />
+              <span className="search-icon" />
+            </div>
+          </div>
 
-
-          {/* Page Wrapper */}
+          {/* Page Content */}
           <div className="agent-mgmt-wrapper">
             {/* Mobile Header */}
             <div className="agent-mgmt-mobile-header">
               <button className="agent-mgmt-back-btn">←</button>
             </div>
 
-            {/* Desktop Layout */}
+            {/* Desktop View */}
             <div className="agent-mgmt-desktop-view">
-              {/* Sidebar Bot Cards */}
+              {/* Left: Bot Cards */}
               <div className="agent-mgmt-sidebar-panel">
                 <div className="agent-mgmt-bot-list">
                   {['Sales Bot', 'Price Bot', 'Support Bot', 'Info Bot'].map((bot, i) => (
                     <div key={i} className="agent-mgmt-bot-card">
                       <div className="agent-mgmt-card-header">
                         <img src={robot} alt="bot" className="agent-mgmt-bot-img" />
-                       
                       </div>
                       <div className="agent-mgmt-card-body">
-                        <h4 className='agent-mgmt-card-Title'>Selamon Bot</h4>
+                        <h4 className="agent-mgmt-card-Title">{bot}</h4>
                         <div className="agent-mgmt-status">Active</div>
                       </div>
                       <div className="agent-mgmt-card-menu agent-mgmt-menu">→</div>
@@ -75,7 +50,7 @@ export default function paste() {
                 </div>
               </div>
 
-              {/* Agent Form Section */}
+              {/* Center: Create Agent Form */}
               <div className="agent-mgmt-form-section">
                 <form className="agent-mgmt-form">
                   <label className="agent-mgmt-label">Name</label>
@@ -87,13 +62,12 @@ export default function paste() {
                   <label className="agent-mgmt-label">Assigned Channel</label>
                   <input type="text" placeholder="Assigned Channel" />
 
-                  {/* Row for Tone Style and Industry */}
                   <div className="agent-mgmt-row-inputs">
-                    <div className='IndustryTone_con'>
+                    <div className="IndustryTone_con">
                       <label className="agent-mgmt-label">Tone Style</label>
                       <input type="text" placeholder="Tone Style" />
                     </div>
-                    <div className='IndustryTone_con'>
+                    <div className="IndustryTone_con">
                       <label className="agent-mgmt-label">Industry</label>
                       <input type="text" placeholder="Industry" />
                     </div>
@@ -103,7 +77,7 @@ export default function paste() {
                 </form>
               </div>
 
-              {/* Created Agent Cards */}
+              {/* Right: Created Agent Cards */}
               <div className="agent-mgmt-right-panel">
                 {[...Array(5)].map((_, i) => (
                   <div key={i} className="agent-mgmt-created-card">

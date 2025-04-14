@@ -12,7 +12,7 @@ const HeroSection = () => {
         {/* 💻 PC version */}
         <div className="hero-text pc-only">
           <h1 className="hero-heading">
-            The Commercial Brain Behind Your Business.
+            The Commercial Brain Behind Your <span id='colorisgray'> Business  </span>.
           </h1>
           <p className="hero-subtext">
             Talkeen is the ultra-intelligent AI system that thinks, speaks, and sells for you — on WhatsApp, voice calls, and more.
@@ -33,9 +33,9 @@ const HeroSection = () => {
 
         {/* ✅ Buttons - Always visible */}
         <div className="cta-buttons">
-      <button className="primary-btn">Start Free – No Card Needed</button>
+      <button className="primary-btn">Start Free</button>
       <button className="secondary-btn">
-        <span className="play-icon">▶</span> Watch Talkeen in Action
+        <span className="play-icon">▶</span> Watch Talkeen
       </button>
     </div>
       </div>

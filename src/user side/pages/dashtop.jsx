@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import '../styles/dashtop.css';
 import languageimage from "../images/language-square.png";
 import closeweye from "../images/eye-slash.png";
 import bankcard from "../images/bankcard.png";
-import bankcardunder from "../images/bankcardunder.png";
-import eyeseactioneye from "../images/openeye.png";
 import openeye from "../images/openeye.png";
 import exportimg from "../images/export.png";
 import importimg from "../images/import.png";
@@ -39,7 +37,7 @@ const Dashboard = () => {
   };
 
   const currentConfig = chartConfigs[activeTab];
-  const chartData = generateChartData(currentConfig.count, currentConfig.max);
+  const chartData = useMemo(() => generateChartData(currentConfig.count, currentConfig.max), [activeTab, chartMode]);
   const chartColor = chartMode === "earning" ? "#1D2A45" : "#FF6B6B";
 
   const toggleConnect = index => {
@@ -50,7 +48,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <SideNavigation/>
+      <SideNavigation />
       <div className="dashboard">
         {/* Left Panel */}
         <div className="left-panel">
@@ -136,7 +134,7 @@ const Dashboard = () => {
               <h4>Monthly Payments</h4>
               <button id='add-button-on-right'>Add +</button>
             </div>
-            
+
             <div className="bill-card">Electricity - $20.30 <button>Pay Now</button></div>
             <div className="bill-card">Internet - $35.00 <button>Pay Now</button></div>
             <div className="bill-card">Rent - $700.00 <button>Pay Now</button></div>
@@ -151,10 +149,9 @@ const Dashboard = () => {
           </div>
 
           <div className="credit-card-wrapper">
-            {/* <div className="credit-card-shadow" style={{ backgroundImage: `url(${bankcardunder})` }}></div> */}
             <div className="credit-card" style={{ backgroundImage: `url(${bankcard})` }}>
               <div className="card-details">
-                {/* Card details would go here */}
+                {/* You can populate this section with details or leave it blank */}
               </div>
             </div>
           </div>
@@ -162,10 +159,10 @@ const Dashboard = () => {
           <div className="card-info">
             <h5>Card Information</h5>
             <button className="eye-btn" onClick={() => setShowCardInfo(!showCardInfo)}>
-              {showCardInfo ? <img id='eyebuyyon' src={closeweye} alt="" /> : <img src={openeye} id='eyebuyyon' alt="" />}
+              <img src={showCardInfo ? closeweye : openeye} id='eyebuyyon' alt="Toggle Card Info" />
             </button>
           </div>
-          
+
           {showCardInfo && (
             <div className="card-box">
               <p><strong>Name:</strong> Leonardo Cap</p>
@@ -178,9 +175,9 @@ const Dashboard = () => {
           <div className="marketplace">
             <div className="market-tabs">
               {['Marketplace', 'History', 'Payment'].map(tab => (
-                <span 
-                  key={tab} 
-                  className={tab === marketTab ? 'active' : ''} 
+                <span
+                  key={tab}
+                  className={tab === marketTab ? 'active' : ''}
                   onClick={() => setMarketTab(tab)}
                 >
                   {tab}

@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./components/navbar";
+import '../css/appjsx.css'
 import HeroSection from "./components/herosection";
 import ResponsiveDisplay from "./components/displaygraph";
 import ResponsiveLogos from "./components/icons";
@@ -12,14 +13,27 @@ import Footer from "./components/footer";
 function Appsecond() {
   return(
     <div>
+
      <Navbar/>
-     <HeroSection/>
+
+     <section id="Hometext">
+  <HeroSection />
+</section>
+
      <ResponsiveDisplay/>
-     <ResponsiveLogos/>
+     {/* <ResponsiveLogos/> */}
      <TalkeenSection/>
      <PricingSection/>
+     <section id="pricing">
      <PricingPlans/>
+  {/* content */}
+</section>
+
+<section id="about">
      <FAQSection/>
+  {/* content */}
+</section>
+
      <Footer/>
     </div>
 

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import '../styles/flowchart.css'; // Create this file for your custom styles
+import '../styles/flowchart.css'; // Create this file with custom styles
 import SideNavigation from '../components/sidebar';
-import { FaToggleOn } from 'react-icons/fa';
 import Form from 'react-bootstrap/Form';
 
 export default function Telephone() {
@@ -15,67 +14,59 @@ export default function Telephone() {
   return (
     <>
       <SideNavigation />
+
       <div className="flow-container">
 
+        {/* Page Header & Search */}
+        <div className="Channel_Management" style={{ paddingLeft: "85px" }}>
+          <h2 className="Channel_Management_Title">Voice Call Flow</h2>
 
+          <div className="search-container">
+            <input
+              type="text"
+              className="search-bar-with-icon"
+              placeholder="Search settings..."
+            />
+            <span className="search-icon">{/* Optional icon */}</span>
+          </div>
+        </div>
 
-
-      <div className="Channel_Management" style={{paddingLeft:"85px"}}>
-           <h2 className="Channel_Management_Title">Voice Call Flow</h2>
-
-            <div className="search-container">
-             <input type="text" className="search-bar-with-icon" placeholder="Search settings..."/>
-             <span className="search-icon">
-            
-              {/* Or use an SVG/icon here if preferred */}
-           </span>
-           </div>
-         </div>
-
-
-
-
-
-
-
-
-
+        {/* Main Grid */}
         <div className="flow-grid">
-          {/* Left Section */}
+
+          {/* LEFT: Settings */}
           <div className="flow-settings">
+            {/* Toggle */}
             <div className="toggle-row">
-              {/* <FaToggleOn size={24} color="#21c55d" /> */}
               <Form>
-      <Form.Check // prettier-ignore
-        type="switch"
-        id="custom-switch"
-        // label="Check this switch"
-        className="custom-switch"
-
-      />
-      
-    </Form>
-
-
-
-              
+                <Form.Check
+                  type="switch"
+                  id="ai-voice-toggle"
+                  className="custom-switch"
+                  checked={aiVoiceEnabled}
+                  onChange={() => setAiVoiceEnabled(!aiVoiceEnabled)}
+                />
+              </Form>
               <span>Enable AI Voice</span>
             </div>
 
+            {/* Call Type */}
             <label>Call Type</label>
-            <select value={callType} onChange={(e) => setCallType(e.target.value)} id='select'>
+            <select value={callType} onChange={(e) => setCallType(e.target.value)} id="select">
               <option>Reminders</option>
               <option>Promotions</option>
               <option>Follow-ups</option>
             </select>
 
-            <label>Text-to-Speech Preview</label>
-            <select value={ttsVoice} onChange={(e) => setTtsVoice(e.target.value)} id='select'>
+            {/* TTS Voice */}
+            <label>Text-to-Speech Voice</label>
+            <select value={ttsVoice} onChange={(e) => setTtsVoice(e.target.value)} id="select">
               <option>Clara</option>
               <option>Brian</option>
               <option>Emma</option>
             </select>
 
+            {/* Speech Input */}
             <label>Speech</label>
             <textarea
               rows="4"
@@ -83,34 +74,44 @@ export default function Telephone() {
               onChange={(e) => setSpeechText(e.target.value)}
             />
 
+            {/* Dynamic Variables Info */}
             <div className="variables-section">
               <p><strong>Available Variables</strong></p>
-              <p>clint name</p>
-              <p>clint name</p>
-              <p>clint name</p>
+              <p>client_name</p>
+              <p>appointment.time</p>
             </div>
 
+            {/* Fallback Info */}
             <div className="fallback-section">
               <p><strong>Auto Fallback</strong></p>
               <p>
-                If the call fails or there are no available credits, Talkeen will automatically
-                send a WhatsApp message to the client.
+                If the call fails or there are no available credits,
+                Talkeen will automatically send a WhatsApp message to the client.
               </p>
             </div>
           </div>
 
-          {/* Right Section */}
+          {/* RIGHT: Flow Logic */}
           <div className="flow-logic">
             <h4>Voice Logic Flow</h4>
+
             <div className="flow-step blue">
               <div className="step-number">1</div>
               <div className="step-text">Did the customer answer?</div>
             </div>
-            <div className="flow-connector"><p>|</p><p>Yes</p><p>↓</p></div>
+
+            <div className="flow-connector">
+              <p>|</p><p>Yes</p><p>↓</p>
+            </div>
+
             <div className="flow-step blue">
               <div className="step-text">Say reminder message</div>
             </div>
-            <div className="flow-connector"><p>|</p><p>No</p><p>↓</p></div>
+
+            <div className="flow-connector">
+              <p>|</p><p>No</p><p>↓</p>
+            </div>
+
             <div className="flow-step gray">
               <div className="step-number">3</div>
               <div className="step-text">Trigger WhatsApp fallback</div>
