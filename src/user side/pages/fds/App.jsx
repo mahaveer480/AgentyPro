@@ -9,6 +9,9 @@ import PricingSection from './components/pricingsec'
 import PricingPlans from "./components/pricecards";
 import FAQSection from "./components/faqs";
 import Footer from "./components/footer";
+import SalesSection from "./components/SalesSection ";
+import ToolkitSection from "./components/ToolkitSection ";
+import SalesHeroSection from "./components/SalesHeroSection ";
 
 function Appsecond() {
   return(
@@ -23,6 +26,8 @@ function Appsecond() {
      <ResponsiveDisplay/>
      {/* <ResponsiveLogos/> */}
      <TalkeenSection/>
+     <SalesSection/>
+     <ToolkitSection/>
      <PricingSection/>
      <section id="pricing">
      <PricingPlans/>
@@ -34,6 +39,7 @@ function Appsecond() {
   {/* content */}
 </section>
 
+     <SalesHeroSection/>
      <Footer/>
     </div>
 

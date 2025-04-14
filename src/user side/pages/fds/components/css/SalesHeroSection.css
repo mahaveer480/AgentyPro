@@ -1,0 +1,141 @@
+.sales-hero {
+    background: #f9f9f9;
+    text-align: center;
+    padding: 60px 20px;
+    /* height: 120vh; */
+    position: relative;
+  }
+  
+  .sales-hero-content h1 {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    color: #111;
+  }
+  
+  .flow-steps-img{
+margin-top: 20px;
+width: 90%;
+
+  }
+
+
+  .sales-hero-content h1 span {
+    color: #666;
+    font-weight: 700;
+  }
+  
+  .sales-hero-content p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 24px;
+  }
+  
+  .cta-button {
+    background: #1a4fff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background: #003ee3;
+  }
+  
+  /* Flow diagram styles */
+  .flow-steps {
+    position: relative;
+    margin-top: 60px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .flow-box {
+    display: inline-block;
+    background: #fff;
+    border: 2px solid #eee;
+    border-radius: 12px;
+    padding: 14px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    position: relative;
+  }
+  
+  .box-left {
+    position: absolute;
+    left: 0;
+    top: 60px;
+  }
+  
+  .box-mid-1 {
+    position: absolute;
+    left: 25%;
+    top: 0;
+  }
+  
+  .box-mid-2 {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+  
+  .box-right {
+    position: absolute;
+    right: 0;
+    top: 60px;
+  }
+  
+  /* Dotted lines */
+  .flow-line {
+    position: absolute;
+    height: 60px;
+    border-left: 2px dashed #ccc;
+  }
+  
+  .top-line {
+    top: 0;
+    left: 12%;
+    width: 76%;
+    height: 2px;
+    border-top: 2px dashed #ccc;
+    border-left: none;
+  }
+  
+  .bottom-line {
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border-top: 2px dashed #ccc;
+    border-left: none;
+    display: none;
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    .flow-steps {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+  
+    .flow-box {
+      position: static;
+      width: 90%;
+    }
+  
+    .flow-line {
+      display: none;
+    }
+  }
+  

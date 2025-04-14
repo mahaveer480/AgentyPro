@@ -1,0 +1,102 @@
+.toolkit-section {
+    background: #f6f6f6;
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .toolkit-subtitle {
+    color: #888;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .toolkit-title {
+    font-size: 46px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    color: #111;
+  }
+  
+  .toolkit-title strong {
+    font-weight: 800;
+    color: #8a8a8a;
+  }
+  
+  .toolkit-logo img {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 40px;
+  }
+  
+  .toolkit-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  
+  .toolkit-icons img {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    /* padding:px; */
+    margin: 20px;
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+  
+  .toolkit-icons img:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* 🔽 Tablet Breakpoint */
+  @media (max-width: 768px) {
+    .toolkit-title {
+      font-size: 28px;
+    }
+  
+    .toolkit-icons {
+      gap: 20px;
+    }
+  
+    .toolkit-icons img {
+      width: 50px;
+      height: 50px;
+      padding: 12px;
+    }
+  }
+  
+  /* 📱 Mobile Breakpoint */
+  @media (max-width: 480px) {
+    .toolkit-section {
+      padding: 60px 16px;
+    }
+  
+    .toolkit-title {
+      font-size: 24px;
+    }
+  
+    .toolkit-subtitle {
+      font-size: 14px;
+    }
+  
+    .toolkit-logo img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 30px;
+    }
+  
+    .toolkit-icons {
+      gap: 16px;
+    }
+  
+    .toolkit-icons img {
+      width: 45px;
+      height: 45px;
+      padding: 10px;
+    }
+  }
+  
