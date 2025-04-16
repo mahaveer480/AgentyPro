@@ -42,7 +42,7 @@ font-weight: 600;}
   gap: 10px;
 }
 .dropdown-menu {
-  position: absolute;
+  position:fixed;
   top: 100%;
   left: 0;
   z-index: 9999;

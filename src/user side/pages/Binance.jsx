@@ -32,7 +32,7 @@ export default function Binance() {
     <>
       <SideNavigation />
 
-      <div className="Channel_Management" style={{ paddingLeft: '85px' }}>
+      <div className="Channel_Management" style={{ paddingLeft: '260px' }}>
         <h2 className="Channel_Management_Title">General</h2>
         <div className="search-container">
           <input
